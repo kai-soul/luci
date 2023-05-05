@@ -30,6 +30,7 @@ e:value("https", translate("HTTPS"))
 e:value("tcp", translate("TCP"))
 e:value("udp", translate("UDP"))
 e:value("stcp", translate("STCP"))
+e:value("sudp",translate("SUDP"))
 e:value("xtcp", translate("XTCP"))
 
 e = t:taboption("base", ListValue, "domain_type", translate("Domain Type"))
@@ -55,6 +56,12 @@ e.default = "server"
 e:value("server", translate("STCP Server"))
 e:value("visitor", translate("STCP Vistor"))
 e:depends("type", "stcp")
+
+e = t:taboption("base", ListValue, "sudp_role", translate("SUDP Role"))
+e.default = "server"
+e:value("server", translate("SUDP Server"))
+e:value("visitor", translate("SUDP Vistor"))
+e:depends("type", "sudp")
 
 e = t:taboption("base", ListValue, "xtcp_role", translate("XTCP Role"))
 e.default = "server"
@@ -99,6 +106,11 @@ e = t:taboption("base", Value, "stcp_servername", translate("STCP Server Name"))
 e.description = translate("STCP Server Name is Service Remark Name of STCP Server")
 e.default = "secret_tcp"
 e:depends("stcp_role", "visitor")
+
+e = t:taboption("base", Value, "sudp_servername", translate("SUDP Server Name"))
+e.description = translate("SUDP Server Name is Service Remark Name of SUDP Server")
+e.default = "secret_udp"
+e:depends("sudp_role", "visitor")
 
 e = t:taboption("base", Value, "xtcp_secretkey", translate("XTCP Screct Key"))
 e.default = "abcdefg"
@@ -201,6 +213,7 @@ e:value("v1", translate("V1"))
 e:value("v2", translate("V2"))
 e:depends("type", "tcp")
 e:depends("type", "stcp")
+e:depends("type","sudp")
 e:depends("type", "xtcp")
 e:depends("type", "http")
 e:depends("type", "https")
