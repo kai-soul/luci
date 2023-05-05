@@ -202,6 +202,9 @@ msgstr "使用子域名时，必须预先在服务端配置主域名(subdomain_h
 msgid "STCP Role"
 msgstr "STCP 服务类型"
 
+msgid "SUDP Role"
+msgstr "SUDP 服务类型"
+
 msgid "XTCP Role"
 msgstr "XTCP 服务类型"
 
@@ -216,6 +219,12 @@ msgstr "STCP 密钥"
 
 msgid "STCP Server Name"
 msgstr "STCP 服务名称"
+
+msgid "SUDP Screct Key"
+msgstr "SUDP 密钥"
+
+msgid "SUDP Server Name"
+msgstr "SUDP 服务名称"
 
 msgid "XTCP Screct Key"
 msgstr "XTCP 密钥"
@@ -279,6 +288,9 @@ msgstr "将用户的真实IP发送到本地服务的代理协议。"
 
 msgid "STCP Server Name is Service Remark Name of STCP Server"
 msgstr "STCP服务器别名"
+
+msgid "SUDP Server Name is Service Remark Name of SUDP Server"
+msgstr "SUDP服务器别名"
 
 msgid "XTCP Server Name is Service Remark Name of XTCP Server"
 msgstr "XTCP服务器别名"
