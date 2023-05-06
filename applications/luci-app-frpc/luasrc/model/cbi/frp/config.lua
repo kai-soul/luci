@@ -107,6 +107,10 @@ e.description = translate("STCP Server Name is Service Remark Name of STCP Serve
 e.default = "secret_tcp"
 e:depends("stcp_role", "visitor")
 
+e = t:taboption("base", Value, "sudp_secretkey", translate("SUDP Screct Key"))
+e.default = "abcdefg"
+e:depends("type", "sudp")
+
 e = t:taboption("base", Value, "sudp_servername", translate("SUDP Server Name"))
 e.description = translate("SUDP Server Name is Service Remark Name of SUDP Server")
 e.default = "secret_udp"
